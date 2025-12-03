@@ -21,11 +21,41 @@
 
     </div> -->
       
-      <div class="h-64 w-full bg-no-repeat bg-cover bg-center bg-[url(/img/fire.jpg)]">
-        <h2 class="text-white">Joanna Kajda</h2>
-        <img src="./img/flammable.png" alt="" class="w-60 h-60">
-        
-      </div>
+    <div class="relative h-64 w-full bg-no-repeat bg-cover bg-center bg-[url('/img/fire.jpg')] flex items-center justify-between px-12">
+
+  <!-- ARTYSTYCZNY OVERLAY -->
+  <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+
+  <!-- TEKST -->
+  <h2 class="relative z-10 text-white text-6xl font-extrabold tracking-wide drop-shadow-xl animate-fade-in">
+    Joanna Kajda
+  </h2>
+
+  <!-- OBRAZ -->
+  <img src="./img/flammable.png" alt="" class="relative z-10 w-64 h-64 drop-shadow-2xl animate-fade-in-right">
+</div>
+
+<!-- ANIMACJE -->
+<style>
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-right {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-fade-in-right {
+  animation: fade-in-right 1s ease-out forwards;
+}
+</style>
+
 
     
 
